@@ -38,9 +38,10 @@ function LandingPage() {
             <a href="#home" className="active">
               Home
             </a>
+            <a href="#whychooseus">Why Choose Us</a>
             <a href="#about">About</a>
-            <a href="#services">Services</a>
             <a href="#products">Products</a>
+            <a href="#team">Our Team</a>
             <a href="#contact">Contact</a>
           </div>
 
@@ -72,14 +73,17 @@ function LandingPage() {
               <a href="#home" className="active" onClick={closeMenu}>
                 Home
               </a>
+              <a href="#whychooseus" onClick={closeMenu}>
+                Why Choose Us
+              </a>
               <a href="#about" onClick={closeMenu}>
                 About
               </a>
-              <a href="#services" onClick={closeMenu}>
-                Services
-              </a>
               <a href="#products" onClick={closeMenu}>
                 Products
+              </a>
+              <a href="#team" onClick={closeMenu}>
+                Our Team
               </a>
               <a href="#contact" onClick={closeMenu}>
                 Contact
@@ -105,14 +109,13 @@ function LandingPage() {
 
               <div className="hero-left">
                 <p>
-                  Enterprise Security
-                  <span> Solutions</span>
+                  24/7 Remote <span>Security</span> Monitoring & Smart{" "}
+                  <span>IoT</span> Integration
                 </p>
                 <p className="hero-content">
-                  Protecting organizations across UK and Pakistan with advanced
-                  security services and cutting-edge threat detection systems.
-                  Up to 90% reduction in security risks through AI-driven
-                  platforms and expert implementation.
+                  Protozen’s Technologies delivers intelligent, real-time remote
+                  CCTV monitoring and IoT-enabled operations monitoring through
+                  our 24/7 Remote Security Operations Centres in UK and Pakistan
                 </p>
                 <button
                   onClick={() =>
@@ -128,56 +131,81 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="section-1">
+        <section className="section-1" id="whychooseus">
           <p className="heading">Why Choose Us</p>
           <div className="section-1-container">
             <div className="section-1-card">
-              <img src="images/image1.gif" alt="Expert Team" />
-              <h2>Expert Team</h2>
+              <img src="images/247 Services.png" alt="24/7 Services" />
+              <h2>24/7 Live Monitoring & Immediate Response</h2>
               <p>
-                Certified security professionals with 15+ years of combined
-                experience serving organizations across the globe. Our team
-                stays updated with latest security threats and countermeasures.
+                Our remote security and operations teams operate in three global
+                shifts to ensure continuous surveillance and incident response,
+                365 days a year. You are protected at all times, every day of
+                the year.
               </p>
             </div>
             <div className="section-1-card">
-              <img src="images/image1.gif" alt="Global Coverage" />
-              <h2>Global Coverage</h2>
+              <img
+                src="images/Operations Monitoring.png"
+                alt="Operations Monitoring & Control"
+              />
+              <h2>Operations Monitoring & Control</h2>
               <p>
-                Serving organizations across UK and Pakistan with localized
-                support and round-the-clock monitoring. We understand regional
-                compliance requirements and implement accordingly.
+                We go beyond CCTV monitoring either you need to remote control
+                of doors, lights, or sensors we develop custom IoT devices for
+                your operations monitoring and control as per your requirements.
               </p>
             </div>
             <div className="section-1-card">
-              <img src="images/image2.gif" alt="Proven Results" />
-              <h2>Proven Results</h2>
+              <img src="images/cost efficiency.png" alt="Cost Efficiency" />
+              <h2>Cost Efficiency</h2>
               <p>
-                99.8% threat detection rate with zero-compromise security
-                standards. Our clients experience significant reduction in
-                security incidents and faster response times.
+                Our Remote Security Operations Centre helps you reduce security
+                and operations costs by up to 70%, replacing traditional
+                staffing with intelligent, scalable monitoring.
+              </p>
+            </div>
+            <div className="section-1-card">
+              <img src="images/Global Presence.png" alt="Global Presence" />
+              <h2>Global Presence</h2>
+              <p>
+                With operations centres in both the United Kingdom and Pakistan,
+                we provide scalable support, localized response, and true
+                around-the-clock coverage for global clients.
+              </p>
+            </div>
+            <div className="section-1-card">
+              <img
+                src="images/Seamless Integration.png"
+                alt="Seamless Integration"
+              />
+              <h2>Seamless Integration</h2>
+              <p>
+                Our services integrate smoothly with your existing systems,
+                providing a hassle-free transition and immediate impact.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="section-2" id="services">
+        <section className="section-2" id="about">
           <div className="section-2-left">
-            <p className="section-2-heading">
-              Comprehensive Security Services for Modern Organizations
+            <p className="section-2-heading">About</p>
+            <p className="section-2-content">
+              At Protozens Technologies, we provide 24/7 remote security
+              monitoring and smart IoT-based operations control for businesses
+              across the UK, Europe, and beyond. Our Remote Security Operations
+              Center teams monitor CCTV, respond to incidents in real time, and
+              integrate custom-built sensors and devices to secure and automate
+              your environment. With dual operations centers in the UK and
+              Pakistan, we deliver continuous coverage, proactive protection,
+              and significant cost savings, all tailored to your industry and
+              infrastructure.
             </p>
-            <button className="section-2-button">Learn More</button>
           </div>
           <div className="section-2-right">
-            <video
-              id="promoVideo"
-              playsInline
-              poster="images/poster.jpg"
-              autoPlay
-              muted
-              loop
-            >
-              <source src="images/Setup Video.mp4" type="video/mp4" />
+            <video id="promoVideo" playsInline autoPlay muted loop>
+              <source src="images/Setup Video 01.mp4" type="video/mp4" />
             </video>
           </div>
         </section>
@@ -190,15 +218,16 @@ function LandingPage() {
                 <h4>Risk Reduction</h4>
               </div>
               <img
-                src="images/19333415.jpg"
-                alt="stats image"
+                src="images/Intruder Protection.jpg"
+                alt="Intruder Protection"
                 className="section-3-mobile-img"
               />
               <p>
-                Elevate your security strategy with our advanced threat
-                detection, personalized risk assessment, and real-time
-                monitoring. Go beyond traditional security and fortify
-                organizational resilience through tailored solutions.
+                We help businesses reduce security risks and improve operations
+                with 24/7 remote monitoring and real-time alerts. Our Remote
+                Security Operations Centre teams quickly detect and respond to
+                threats, while our smart IoT solutions allow remote control and
+                monitoring of your environment based on your unique needs.
               </p>
               <div className="section-3-footer">
                 <div className="section-3-footer-percentage">90%</div>
@@ -209,7 +238,10 @@ function LandingPage() {
               </div>
             </div>
             <div className="section-3-right">
-              <img src="images/19333415.jpg" alt="Statistics visualization" />
+              <img
+                src="images/Intruder Protection.jpg"
+                alt="Intruder Protection"
+              />
             </div>
           </div>
         </section>
@@ -219,10 +251,7 @@ function LandingPage() {
           <div className="section-4-container">
             <div className="section-4-left">
               <div className="section-4-header">
-                <img
-                  src="images/CCTV Monitoring.png"
-                  alt="SecureNet Platform"
-                />
+                <img src="images/CCTV Monitoring.png" alt="CCTV Monitoring" />
               </div>
               <img
                 src="images/Product 01.jpg"
@@ -230,58 +259,125 @@ function LandingPage() {
                 className="section-4-image"
               />
               <div className="section-4-content">
-                <strong>SecureNet Platform:</strong> Real-time threat detection,
-                network monitoring, automated incident response, and advanced
-                analytics dashboard. Provides 24/7 protection with intelligent
-                threat identification and immediate response mechanisms.
+                <strong>Remote Security Monitoring:</strong> We provide 24/7
+                live CCTV monitoring of your premises through our global Remote
+                Security Operations Centres. Our trained agents detect threats
+                in real time, communicate with your team, and trigger audio
+                deterrents when needed. Every event is logged and reported to
+                keep you fully informed and in control.
               </div>
-              <button className="section-4-button">Learn More</button>
+              <button
+                className="section-4-button"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Learn More
+              </button>
             </div>
             <div className="section-4-right">
               <div className="section-4-header">
-                <img src="images/image4.png" alt="ThreatShield Pro" />
+                <img
+                  src="images/IoT Protection Devices.png"
+                  alt="IoT Protection Devices"
+                />
               </div>
               <img
-                src="images/businessman-working-late-night.jpg"
+                src="images/IoT Devices.jpg"
                 alt="ThreatShield Training"
                 className="section-4-image"
               />
               <div className="section-4-content">
-                <strong>ThreatShield Pro:</strong> Employee security awareness
-                training, phishing simulations, risk scoring system, and
-                compliance reporting. Educates teams on emerging threats while
-                maintaining detailed audit trails for regulatory compliance.
+                <strong>Custom IoT for Security Operations:</strong> We design
+                and deploy smart IoT devices to help you monitor and control
+                your environment remotely. From sensors and emergency triggers
+                to smart relays and automated systems, our custom-built
+                solutions integrate directly into your security operations and
+                help you respond faster and smarter.
               </div>
-              <button className="section-4-button">Learn More</button>
+              <a
+                href="https://protozens.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="section-4-button"
+              >
+                Learn More
+              </a>
             </div>
           </div>
         </section>
 
-        <section className="section-team" id="about">
+        <section className="section-team" id="team">
           <div className="team-container">
             <p className="team-heading">Our Team</p>
             <p className="team-description">
-              Meet the dedicated professionals behind our security services.
-              With combined expertise in enterprise security, risk management,
-              and digital protection, our team is committed to safeguarding your
-              organization's most critical assets.
+              At Protozen’s, our strength lies in our people. Our team of
+              security professionals, IoT engineers, and monitoring specialists
+              work together to protect your operations around the clock. Every
+              client engagement is backed by technical depth, operational
+              discipline, and a genuine commitment to safety and innovation
             </p>
 
             <div className="ceo-card">
               <img
-                src="images/ceo-image.jpg"
+                src="images/Abduur Rehman Akhtar.png"
                 alt="CEO Name"
                 className="ceo-image"
               />
               <div className="ceo-info">
-                <h3>CEO Name</h3>
+                <h3>Abdur Rehman Akhtar</h3>
                 <p className="ceo-title">Chief Executive Officer</p>
                 <p className="ceo-bio">
-                  With over 15 years of experience in cybersecurity and
-                  enterprise risk management, our CEO leads the vision of
-                  providing world-class security solutions to organizations
-                  globally.
+                  Abdurrehman Akhtar is a robotics and IoT engineer with over a
+                  decade of experience in smart systems, embedded security,
+                  automation and security monitoring. As the founder of
+                  Protozen’s, he leads the company’s vision to deliver
+                  intelligent remote monitoring solutions that combine human
+                  oversight with advanced technology. His background in
+                  mechatronics, AI, and embedded design shapes the innovation
+                  that powers Protozen’s Remote Security Operations Centre and
+                  IoT services.
                 </p>
+              </div>
+            </div>
+            <div className="managers-section">
+              <p className="managers-heading">Leadership Team</p>
+              <div className="managers-grid">
+                <div className="manager-card">
+                  <img
+                    src="images/Abdullah Akhtar.png"
+                    alt="Manager 1"
+                    className="manager-image"
+                  />
+                  <h4>Abdullah Akhtar</h4>
+                  <p className="manager-designation">
+                    Operations Manager Pakistan
+                  </p>
+                </div>
+
+                <div className="manager-card">
+                  <img
+                    src="images/IMG_6855.jpg"
+                    alt="Manager 2"
+                    className="manager-image"
+                  />
+                  <h4>Waheed Afridi</h4>
+                  <p className="manager-designation">
+                    Operations Manager United Kingdom
+                  </p>
+                </div>
+
+                <div className="manager-card">
+                  <img
+                    src="images/Hasnain Yaseen.jpeg"
+                    alt="Manager 3"
+                    className="manager-image"
+                  />
+                  <h4>Hasnain Yaseen</h4>
+                  <p className="manager-designation">IT & Support Manager</p>
+                </div>
               </div>
             </div>
           </div>
@@ -297,7 +393,7 @@ function LandingPage() {
                   <i className="fas fa-envelope" />
                 </div>
                 <h3>Email</h3>
-                <p>contact@company.com</p>
+                <p>contact@protozens.com</p>
                 <a
                   href="mailto:contact@company.com"
                   className="contact-card-link"
@@ -311,7 +407,7 @@ function LandingPage() {
                   <i className="fas fa-phone" />
                 </div>
                 <h3>Phone</h3>
-                <p>+44 (0) 207 183 8750</p>
+                <p>+44 (0) 744 051 5186</p>
                 <a href="tel:+442071838750" className="contact-card-link">
                   Call Us
                 </a>
@@ -324,7 +420,7 @@ function LandingPage() {
                 <h3>LinkedIn</h3>
                 <p>Connect with us</p>
                 <a
-                  href="https://linkedin.com/company/yourcompany"
+                  href="https://www.linkedin.com/company/protozen/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-card-link"
@@ -357,19 +453,20 @@ function LandingPage() {
               <p className="footer-nav-heading">Quick Links</p>
               <div className="footer-nav-menu">
                 <a href="#home">Home</a>
+                <a href="#whychooseus">Why Choose Us</a>
                 <a href="#about">About</a>
-                <a href="#services">Services</a>
                 <a href="#products">Products</a>
+                <a href="#team">Our Team</a>
                 <a href="#contact">Contact</a>
               </div>
             </div>
             <div className="column-right">
               <p className="footer-nav-heading">Contact</p>
               <div className="footer-nav-menu-contact">
-                <a href="tel:+442071838750">+44 (0) 207 183 8750</a>
-                <a href="mailto:contact@company.com">contact@company.com</a>
+                <a href="tel:+442071838750">+44 (0) 744 051 5186</a>
+                <a href="mailto:contact@company.com">contact@protozens.com</a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/protozen/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
