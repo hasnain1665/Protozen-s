@@ -1092,11 +1092,21 @@ body {
   transition: color 0.3s ease;
 }
 
+.manager-degree {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0.5rem 0 0 0;
+  transition: color 0.3s ease;
+  font-style: italic;
+}
+
 // Contact Cards Section
 .section-contact-cards {
   padding: 2.5rem 4rem;
   background-color: var(--bg-primary);
   transition: background-color 0.3s ease;
+  
 
   @media (max-width: $mobile) {
     padding: 2rem 1.5rem;
@@ -1121,70 +1131,138 @@ body {
   }
 }
 
-.contact-cards-grid {
+
+
+// Contact Form Styles
+.contact-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
-.contact-card-item {
-  background-color: var(--bg-gray);
-  padding: 2rem;
-  border-radius: 15px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+.contact-form-container {
+  grid-column: 1;
 
-  &:hover {
-    transform: translateY(-10px);
-    border-color: var(--border-primary);
-    box-shadow: 0 12px 25px rgba(224, 135, 253, 0.2);
+  @media (max-width: $tablet) {
+    grid-column: 1;
   }
+}
+
+.form-wrapper {
+  background-color: var(--bg-gray);
+  padding: 2.5rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  max-width: 55%;
+  width: 100%;
+  margin: 0 auto;
 
   @media (max-width: $mobile) {
     padding: 1.5rem;
   }
 }
 
-.contact-card-icon {
-  font-size: 3rem;
-  color: $primary-purple;
-  margin-bottom: 1rem;
+.form-title {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transition: color 0.3s ease;
 }
 
-.contact-card-item h3 {
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
   color: var(--text-primary);
-  font-size: 22px;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  font-size: 14px;
   transition: color 0.3s ease;
 }
 
-.contact-card-item p {
-  color: var(--text-secondary);
-  font-size: 16px;
-  margin-bottom: 1.5rem;
-  transition: color 0.3s ease;
+.form-input {
+  padding: 12px 15px;
+  border: 2px solid var(--border-primary);
+  border-radius: 8px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: $primary-font;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+
+  &:focus {
+    border-color: $primary-pink;
+    box-shadow: 0 0 8px rgba(224, 135, 253, 0.3);
+  }
+
+  &::placeholder {
+    color: var(--text-secondary);
+  }
 }
 
-.contact-card-link {
-  display: inline-block;
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 2px solid rgba(76, 175, 80, 1);
+  color: #4caf50;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.form-error {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 2px solid rgba(244, 67, 54, 1);
+  color: #f44336;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.form-submit-button {
   padding: 12px 30px;
   @include gradient-border();
   color: var(--text-primary);
-  text-decoration: none;
-
   cursor: pointer;
   transition: all 0.3s ease !important;
-  margin-top: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
 
-  &:hover {
+  &:hover:not(:disabled) {
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 15px rgba(224, 135, 253, 0.4) !important;
   }
 
-  &:active {
-    transform: translateY(0) !important;
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 

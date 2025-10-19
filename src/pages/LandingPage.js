@@ -1,6 +1,7 @@
 // LandingPage.js
 import React, { useEffect, useState } from "react";
 import "../styles/main.scss";
+import ContactForm from "../components/ContactForm";
 
 function LandingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -285,7 +286,7 @@ function LandingPage() {
                 />
               </div>
               <img
-                src="images/IoT Devices.jpg"
+                src="images/IoT Devices.png"
                 alt="ThreatShield Training"
                 className="section-4-image"
               />
@@ -294,8 +295,8 @@ function LandingPage() {
                 and deploy smart IoT devices to help you monitor and control
                 your environment remotely. From sensors and emergency triggers
                 to smart relays and automated systems, our custom-built
-                solutions integrate directly into your security operations and
-                help you respond faster and smarter.
+                solutions shown in above image integrate directly into your
+                security operations and help you respond faster and smarter.
               </div>
               <a
                 href="https://protozens.com/"
@@ -353,8 +354,9 @@ function LandingPage() {
                   />
                   <h4>Abdullah Akhtar</h4>
                   <p className="manager-designation">
-                    Operations Manager Pakistan
+                    Director/Operations Manager Pakistan
                   </p>
+                  <p className="manager-degree">Masters from NCB&E</p>
                 </div>
 
                 <div className="manager-card">
@@ -367,6 +369,9 @@ function LandingPage() {
                   <p className="manager-designation">
                     Operations Manager United Kingdom
                   </p>
+                  <p className="manager-degree">
+                    Master from University of Aberdeen
+                  </p>
                 </div>
 
                 <div className="manager-card">
@@ -377,6 +382,7 @@ function LandingPage() {
                   />
                   <h4>Hasnain Yaseen</h4>
                   <p className="manager-designation">IT & Support Manager</p>
+                  <p className="manager-degree">Masters from UET Lahore</p>
                 </div>
               </div>
             </div>
@@ -386,48 +392,8 @@ function LandingPage() {
         <section className="section-contact-cards" id="contact">
           <div className="contact-cards-container">
             <p className="contact-heading">Get In Touch</p>
-
-            <div className="contact-cards-grid">
-              <div className="contact-card-item">
-                <div className="contact-card-icon">
-                  <i className="fas fa-envelope" />
-                </div>
-                <h3>Email</h3>
-                <p>contact@protozens.com</p>
-                <a
-                  href="mailto:contact@company.com"
-                  className="contact-card-link"
-                >
-                  Send Email
-                </a>
-              </div>
-
-              <div className="contact-card-item">
-                <div className="contact-card-icon">
-                  <i className="fas fa-phone" />
-                </div>
-                <h3>Phone</h3>
-                <p>+44 (0) 744 051 5186</p>
-                <a href="tel:+442071838750" className="contact-card-link">
-                  Call Us
-                </a>
-              </div>
-
-              <div className="contact-card-item">
-                <div className="contact-card-icon">
-                  <i className="fab fa-linkedin" />
-                </div>
-                <h3>LinkedIn</h3>
-                <p>Connect with us</p>
-                <a
-                  href="https://www.linkedin.com/company/protozen/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-card-link"
-                >
-                  Visit LinkedIn
-                </a>
-              </div>
+            <div className="contact-wrapper">
+              <ContactForm />
             </div>
           </div>
         </section>
