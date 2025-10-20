@@ -3,7 +3,7 @@ node_modules/
 # TypeScript
 *.tsbuildinfo
 
-# Environment
+# Environment (but NOT .env.production)
 .env
 .env.local
 .env.*.local

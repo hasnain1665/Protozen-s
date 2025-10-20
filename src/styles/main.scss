@@ -439,6 +439,19 @@ body {
   }
 }
 
+.hero-savings {
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  color: $primary-pink !important;
+  font-weight: 600 !important;
+  margin: 0.5rem 0 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: $mobile) {
+    font-size: 16px !important;
+  }
+}
+
 .mobile-img {
   display: none;
 }
@@ -1106,7 +1119,6 @@ body {
   padding: 2.5rem 4rem;
   background-color: var(--bg-primary);
   transition: background-color 0.3s ease;
-  
 
   @media (max-width: $mobile) {
     padding: 2rem 1.5rem;
@@ -1131,8 +1143,6 @@ body {
   }
 }
 
-
-
 // Contact Form Styles
 .contact-wrapper {
   display: grid;
@@ -1140,7 +1150,6 @@ body {
   gap: 3rem;
   align-items: center;
   width: 100%;
-
 
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
@@ -1167,6 +1176,7 @@ body {
 
   @media (max-width: $mobile) {
     padding: 1.5rem;
+    max-width: 80%;
   }
 }
 

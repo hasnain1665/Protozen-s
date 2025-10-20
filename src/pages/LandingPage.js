@@ -5,7 +5,10 @@ import ContactForm from "../components/ContactForm";
 
 function LandingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = sessionStorage.getItem("darkMode");
+    return saved !== null ? JSON.parse(saved) : true;
+  });
 
   const toggleMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -16,7 +19,11 @@ function LandingPage() {
   };
 
   const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
+    setIsDarkMode((prev) => {
+      const newMode = !prev;
+      sessionStorage.setItem("darkMode", JSON.stringify(newMode));
+      return newMode;
+    });
   };
 
   useEffect(() => {
@@ -118,6 +125,9 @@ function LandingPage() {
                   CCTV monitoring and IoT-enabled operations monitoring through
                   our 24/7 Remote Security Operations Centres in UK and Pakistan
                 </p>
+                <p className="hero-savings">
+                  Save up to 70% of your operational costs
+                </p>
                 <button
                   onClick={() =>
                     document
@@ -186,6 +196,18 @@ function LandingPage() {
                 providing a hassle-free transition and immediate impact.
               </p>
             </div>
+            <div className="section-1-card">
+              <img
+                src="images/custome iot devices.png"
+                alt="Seamless Integration"
+              />
+              <h2>Custom IoT Devices</h2>
+              <p>
+                We design and build tailored IoT devices from smart sensors and
+                automated triggers to custom control systems specifically for
+                your security and operational needs.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -195,12 +217,12 @@ function LandingPage() {
             <p className="section-2-content">
               At Protozens Technologies, we provide 24/7 remote security
               monitoring and smart IoT-based operations control for businesses
-              across the UK, Europe, and beyond. Our Remote Security Operations
-              Center teams monitor CCTV, respond to incidents in real time, and
-              integrate custom-built sensors and devices to secure and automate
-              your environment. With dual operations centers in the UK and
-              Pakistan, we deliver continuous coverage, proactive protection,
-              and significant cost savings, all tailored to your industry and
+              across the globe. Our Remote Security Operations Center teams
+              monitor CCTV, respond to incidents in real time, and integrate
+              custom-built sensors and devices to secure and automate your
+              environment. With dual operations centers in the UK and Pakistan,
+              we deliver continuous coverage, proactive protection, and
+              significant cost savings, all tailored to your industry and
               infrastructure.
             </p>
           </div>
@@ -299,7 +321,7 @@ function LandingPage() {
                 security operations and help you respond faster and smarter.
               </div>
               <a
-                href="https://protozens.com/"
+                href="https://iot.protozens.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="section-4-button"
@@ -370,7 +392,7 @@ function LandingPage() {
                     Operations Manager United Kingdom
                   </p>
                   <p className="manager-degree">
-                    Master from University of Aberdeen
+                    Masters from University of Aberdeen
                   </p>
                 </div>
 

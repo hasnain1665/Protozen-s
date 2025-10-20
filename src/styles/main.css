@@ -545,6 +545,21 @@ body {
   }
 }
 
+.hero-savings {
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  color: #ff00d4 !important;
+  font-weight: 600 !important;
+  margin: 0.5rem 0 !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-savings {
+    font-size: 16px !important;
+  }
+}
+
 .mobile-img {
   display: none;
 }
@@ -1530,6 +1545,7 @@ body {
 @media (max-width: 768px) {
   .form-wrapper {
     padding: 1.5rem;
+    max-width: 80%;
   }
 }
 
