@@ -470,7 +470,7 @@ body {
   z-index: 10;
   text-align: center;
   width: 80%;
-  max-width: 700px;
+  max-width: 750px;
 }
 
 @media (max-width: 768px) {
