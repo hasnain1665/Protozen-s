@@ -138,9 +138,17 @@ body {
   @include flex-center;
   gap: 1rem;
 
+  @media (max-width: $mobile) {
+    gap: 0.5rem;
+  }
+
   .toggle-button {
     width: auto;
     @include flex-center;
+
+    @media (max-width: $mobile) {
+      order: 1;
+    }
 
     .toggle-switch {
       position: relative;
@@ -280,6 +288,40 @@ body {
   }
 }
 
+.header-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary-card);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background-color: $primary-purple;
+    color: white;
+    transform: translateY(-2px);
+  }
+}
+
 .mobile-nav {
   display: none;
   transition: background-color 0.3s ease;
@@ -319,6 +361,39 @@ body {
         color: $primary-pink;
       }
     }
+  }
+}
+
+.mobile-nav-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-primary);
+}
+
+.mobile-nav-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary-card);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background-color: $primary-purple;
+    color: white;
+    transform: scale(1.1);
   }
 }
 
