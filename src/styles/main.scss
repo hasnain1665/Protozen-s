@@ -101,7 +101,7 @@ body {
 
   @media (max-width: $mobile) {
     width: 80px;
-    height: 40px;
+    height: 35px;
   }
 
   img {
@@ -155,10 +155,32 @@ body {
         height: 0;
 
         &:checked + .slider {
-          background-color: $toggle-dark;
+          background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 100%);
 
           &::before {
             transform: translateX(26px);
+          }
+
+          .sun-icon {
+            opacity: 0;
+            visibility: hidden;
+          }
+
+          .moon-icon {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        &:not(:checked) + .slider {
+          .sun-icon {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .moon-icon {
+            opacity: 0;
+            visibility: hidden;
           }
         }
       }
@@ -170,20 +192,46 @@ body {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: $toggle-light;
-        transition: 0.4s;
+        background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+        transition: background 0.4s;
         border-radius: 30px;
+        overflow: visible;
 
         &::before {
           position: absolute;
           content: "";
           height: 22px;
-          width: 26px;
+          width: 22px;
           left: 4px;
           bottom: 4px;
-          background-color: white;
-          transition: 0.4s;
+          background-color: #fff;
+          transition: transform 0.4s;
           border-radius: 50%;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          z-index: 2;
+        }
+
+        .sun-icon,
+        .moon-icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-55%);
+          font-size: 17px;
+          transition: opacity 0.3s, visibility 0.3s;
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .sun-icon {
+          right: 3px;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .moon-icon {
+          left: 3px;
+          opacity: 0;
+          visibility: hidden;
         }
       }
     }
@@ -1171,13 +1219,13 @@ body {
   padding: 2.5rem;
   border-radius: 15px;
   transition: all 0.3s ease;
-  max-width: 55%;
+  max-width: 60%;
   width: 100%;
   margin: 0 auto;
 
   @media (max-width: $mobile) {
     padding: 1.5rem;
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
@@ -1337,6 +1385,7 @@ footer {
     font-weight: 300;
     line-height: 28px;
     transition: color 0.3s ease;
+    margin-top: 0.1rem;
   }
   @media (max-width: $mobile) {
     width: 100%;
@@ -1349,8 +1398,8 @@ footer {
   text-align: left;
 
   @media (max-width: $mobile) {
-    width: 70px;
-    height: 35px;
+    width: 90px;
+    height: 45px;
   }
 
   img {

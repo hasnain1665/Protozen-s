@@ -71,7 +71,10 @@ function LandingPage() {
                   checked={isDarkMode}
                   onChange={toggleDarkMode}
                 />
-                <span className="slider" />
+                <span className="slider">
+                  <span className="sun-icon">☀️</span>
+                  <span className="moon-icon">🌙</span>
+                </span>
               </label>
             </div>
           </div>
