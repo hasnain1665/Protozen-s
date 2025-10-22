@@ -10,6 +10,8 @@ function LandingPage() {
     return saved !== null ? JSON.parse(saved) : true;
   });
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const toggleMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
   };
@@ -34,9 +36,19 @@ function LandingPage() {
     }
   }, [isDarkMode]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
-      <header>
+      <header className={isScrolled ? "sticky" : ""}>
         <div className="nav-bar">
           <div className="logo">
             <img src="images/Protozen Company Logo.png" alt="Company logo" />

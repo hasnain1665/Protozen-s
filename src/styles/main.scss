@@ -60,6 +60,57 @@ $tablet: 1024px;
   box-sizing: border-box;
 }
 
+header {
+  position: relative;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation: slideDown 0.3s ease-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: $mobile) {
+      animation: slideDown 0.3s ease-out;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+main {
+  padding-top: 0;
+  transition: padding-top 0.3s ease;
+}
+
+header.sticky ~ main {
+  padding-top: 90px;
+
+  @media (max-width: $mobile) {
+    padding-top: 70px;
+  }
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -169,26 +220,14 @@ body {
             transform: translateX(26px);
           }
 
-          .sun-icon {
-            opacity: 0;
-            visibility: hidden;
-          }
-
-          .moon-icon {
-            opacity: 1;
-            visibility: visible;
-          }
-        }
-
-        &:not(:checked) + .slider {
-          .sun-icon {
-            opacity: 1;
-            visibility: visible;
-          }
-
           .moon-icon {
             opacity: 0;
             visibility: hidden;
+          }
+
+          .sun-icon {
+            opacity: 1;
+            visibility: visible;
           }
         }
       }
@@ -222,7 +261,7 @@ body {
         .sun-icon,
         .moon-icon {
           position: absolute;
-          top: 50%;
+          top: 53%;
           transform: translateY(-55%);
           font-size: 17px;
           transition: opacity 0.3s, visibility 0.3s;
@@ -231,15 +270,15 @@ body {
         }
 
         .sun-icon {
-          right: 3px;
-          opacity: 1;
-          visibility: visible;
-        }
-
-        .moon-icon {
           left: 3px;
           opacity: 0;
           visibility: hidden;
+        }
+
+        .moon-icon {
+          right: 3px;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }
