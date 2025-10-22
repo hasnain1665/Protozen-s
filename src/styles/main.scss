@@ -223,11 +223,13 @@ body {
           .moon-icon {
             opacity: 0;
             visibility: hidden;
+            transform: translateY(-150%);
           }
 
           .sun-icon {
             opacity: 1;
             visibility: visible;
+            transform: translateY(-55%);
           }
         }
       }
@@ -264,7 +266,7 @@ body {
           top: 53%;
           transform: translateY(-55%);
           font-size: 17px;
-          transition: opacity 0.3s, visibility 0.3s;
+          transition: opacity 0.3s, visibility 0.3s, transform 0.4s ease-out;
           z-index: 1;
           pointer-events: none;
         }
@@ -273,12 +275,14 @@ body {
           left: 3px;
           opacity: 0;
           visibility: hidden;
+          transform: translateY(-150%);
         }
 
         .moon-icon {
           right: 3px;
           opacity: 1;
           visibility: visible;
+          transform: translateY(-55%);
         }
       }
     }
